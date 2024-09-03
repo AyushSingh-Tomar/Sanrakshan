@@ -7,7 +7,8 @@ import search_icon from './search_icon.png';
 import phone from './phone.png';
 import mail from './mail.png';
 import complaint from './complaint.png';
-
+import heroimg from './fireHomepage.jpg';
+import besafe from './besafe.jpg';
 // below here you will put all these images in form of an object to export, keep this export at the end , do not form copy of it.
 
 export const assets ={
@@ -16,7 +17,9 @@ export const assets ={
     search_icon,
     phone,
     mail,
-    complaint
+    complaint,
+    heroimg,
+    besafe
     // if you add your variable at last , then no need to add a comma but add comma at the end of upper variable.
 } 
 
