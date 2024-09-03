@@ -5,14 +5,11 @@
     justify-content: space-between;
     align-items: center;
 }
-/* .navbar .log
+.navbar .logo
 {
     width: 150px;
-} */
-.navbar .logoClass
-{
-    scale:0.5;
 }
+
 .navbar-menu
 {
     display: flex;

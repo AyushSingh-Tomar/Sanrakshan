@@ -5,7 +5,8 @@ import { useState } from 'react'
 const Navbar = () => {
   const [menu,setMenu] =useState("home");
   return (
-    <div className='navbar'><img className="logoClass" src={assets.logo} alt="not found" />
+    <div className='navbar'>
+      <img className="logo" src={assets.logo} alt="not found" />
       <ul className="navbar-menu">
         <li onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>Home</li>
         <li onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>Track Progress</li>
