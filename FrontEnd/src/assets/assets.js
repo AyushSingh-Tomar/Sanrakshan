@@ -38,7 +38,7 @@ export const checkList =[
     CheckMark: false}
 ]
 
-export const PracticeList =[
+export const practiceList =[
     { Description: "You have to.....",
      CheckMark: false},
     { Description: "You have to.....",

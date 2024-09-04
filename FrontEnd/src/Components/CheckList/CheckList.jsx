@@ -14,7 +14,7 @@ const CheckList = () => {
         <Card.Title>{item.name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Important for Id verification</Card.Subtitle>
         <Card.Text>
-          <p>{item.Description}</p>
+          {item.Description}
         </Card.Text>
         <Card.Link href="#">Read More</Card.Link>
         <Card.Link href="#">Upload</Card.Link>
