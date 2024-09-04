@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets';
 function CardTab() {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={assets.besafe} />
+      <Card.Img variant="top" src={assets.guideline} />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>

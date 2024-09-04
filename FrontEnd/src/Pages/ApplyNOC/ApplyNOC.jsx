@@ -1,6 +1,11 @@
+import './ApplyNOC.css'
+import {CheckList} from '../../Components/CheckList/CheckList'
 const ApplyNOC = () => {
   return (
-    <div>ApplyNOC</div>
+    <>
+    <CheckList/>
+    <div></div>
+    </>
   )
 }
 

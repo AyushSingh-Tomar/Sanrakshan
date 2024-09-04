@@ -1,5 +1,4 @@
 import './Header.css'
-import {assets} from '../../assets/assets'
 const Header = () => {
   return (
     <>

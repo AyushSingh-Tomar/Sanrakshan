@@ -9,6 +9,7 @@ import mail from './mail.png';
 import complaint from './complaint.png';
 import heroimg from './fireHomepage.jpg';
 import besafe from './besafe.jpg';
+import guideline from './guideline.jpg';
 // below here you will put all these images in form of an object to export, keep this export at the end , do not form copy of it.
 
 export const assets ={
@@ -19,17 +20,21 @@ export const assets ={
     mail,
     complaint,
     heroimg,
-    besafe
+    besafe,
+    guideline
     // if you add your variable at last , then no need to add a comma but add comma at the end of upper variable.
 } 
 
 // this is Inspector List
-export const CheckList =[
-   { Description: "You have to.....",
+export const checkList =[
+   {name:"Aadhar card", 
+    Description: "You have to.....",
     CheckMark: false},
-   { Description: "You have to.....",
+   {name:"Aadhar card", 
+    Description: "You have to.....",
     CheckMark: false},
-   { Description: "You have to.....",
+   {name:"Aadhar card", 
+    Description: "You have to.....",
     CheckMark: false}
 ]
 
