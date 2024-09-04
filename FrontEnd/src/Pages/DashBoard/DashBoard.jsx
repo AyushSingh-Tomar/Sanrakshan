@@ -90,7 +90,7 @@ const DashBoard = () => {
       iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
       
     >
-      <h3 className="vertical-timeline-element-title">Chief Fire Officer (CFO) in Interactive Digital Media Visual Imaging</h3>
+      <h3 className="vertical-timeline-element-title">Chief Fire Officer (CFO)</h3>
      
       <p>
       Involvement: Reviews and approves the final NOC after verification of compliance with fire safety
