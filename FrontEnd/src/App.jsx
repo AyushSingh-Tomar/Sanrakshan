@@ -17,10 +17,10 @@ const App = () => {
     <div className='app'>
     <Navbar/>
     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/dashboard" element={<DashBoard/>}/>
-      <Route path="/trackProgress" element={<TrackProgress/>}/>
-      <Route path="/applynoc" element={<ApplyNOC/>}/>
+<Route path="/" element={<Home/>}/>
+<Route path="/dashboard" element={<DashBoard/>}/>
+<Route path="/trackProgress" element={<TrackProgress/>}/>
+<Route path="/applynoc" element={<ApplyNOC/>}/>
     </Routes>
     </div>
     <Footer/>
