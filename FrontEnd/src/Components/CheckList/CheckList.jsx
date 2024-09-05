@@ -1,7 +1,41 @@
 import './CheckList.css'
+import axios from "axios";
+import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import {checkList} from '../../assets/assets'
 const CheckList = () => {
+  const [file,setFile]=useState(null);
+  const [progress,setProgress]=useState({started:false,pc:0});
+  const [msg,setMsg]=useState({started:false,pc:0});
+ function handleUpload(){
+  if(!file)
+  {
+   setMsg("No File chosen !");
+    return;
+  }
+  const fd=new FormData();
+  fd.append('file',file)
+  setMsg("Uploading...");
+  axios.post('https://httpbin.org/post',fd,{
+    onUploadProgress:(progressEvent)=>{
+       setProgress(prevState=>{
+        return {...prevState, pc: progressEvent.progress*100}
+       })
+      },
+      headers:{
+       "Custom-Header":"value",
+    }
+  })
+  .then(res=> {
+    setMsg("Upload Successful");
+    setProgress(prevState=>{
+      return {...prevState, started:true}
+    })
+    console.log(res.data);})
+  .catch(err=> {
+    setMsg("Upload failed");
+    alert(err)});
+ }
   return (
     <div className='req-docs' id='req-docs'>
       <h1>List of Required Documents</h1>
@@ -16,8 +50,15 @@ const CheckList = () => {
         <Card.Text>
           {item.Description}
         </Card.Text>
-        <Card.Link href="#">Read More</Card.Link>
-        <Card.Link href="#">Upload</Card.Link>
+       < input onChange={(e)=>{e.target.files[0]}} type='file'/>
+        <button onClick={handleUpload}>Upload</button>
+        {
+          progress.started && <progress max="100" value={progress.pc}> </progress>
+        }
+        {
+          
+          
+        }
       </Card.Body>
     </Card>
           </div>
