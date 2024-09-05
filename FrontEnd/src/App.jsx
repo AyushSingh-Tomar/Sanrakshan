@@ -10,12 +10,16 @@ import Footer from './Components/Footer/Footer'
 import { useState } from "react"
 
 const App = () => {
-  const [showLogin,setShowLogin]=useState(false)
+  const [showLogin,setShowLogin]=useState(false);
+  const toggleLoginPopup = () => {
+    setShowLogin(!showLogin);
+  };
   return (
     <>
-    {showLogin?<LoginPopup/>:<></>}
+    {/* {showLogin?<LoginPopup/>:<></>} */}
+    {showLogin && <LoginPopup toggleDialog={toggleLoginPopup}/>} 
     <div className='app'>
-    <Navbar/>
+    <Navbar toggleLoginPopup={toggleLoginPopup}/>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/dashboard" element={<DashBoard/>}/>
