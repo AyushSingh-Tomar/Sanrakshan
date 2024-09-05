@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import './ScheduleInspection.css'
-import CalendarComp from '.../Components/Calendar/Calendar.jsx';
-import Modal from '.../Components/Modal/Modal.jsx';
-import Card from '.../Components/InspectorCard/Card.jsx';
+import './App.css'
+import CalendarComp from './Components/Calendar/Calendar.jsx';
+import Modal from './Components/Modal/Modal.jsx';
+import Card from './Components/InspectorCard/Card.jsx';
 
+//mock data
 const numberOfInspector = 9;
 const Inspectors = [
   {
@@ -32,6 +33,7 @@ const Inspectors = [
     description:"John is a skilled software engineer with 5 years of experience in full-stack development."
   }
 ];
+// mock data ends
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);

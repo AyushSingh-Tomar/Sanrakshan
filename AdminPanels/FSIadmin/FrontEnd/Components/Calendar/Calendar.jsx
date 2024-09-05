@@ -2,6 +2,17 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import './Calendar.css';
+
+
+// mock data
+const Available =[
+  new Date(2024,8,21),
+  new Date(2024,8,28),
+  new Date(2024,9,11),
+];
+const completeAvailable = new Date(2024, 9, 12);
+// mock data ends
+
 const isSameDate = (date1, date2) => {
   return (
     date1.getFullYear() === date2.getFullYear() &&
@@ -9,18 +20,6 @@ const isSameDate = (date1, date2) => {
     date1.getDate() === date2.getDate()
   );
 };
-const Available =[
-  new Date(2024,8,21),
-  new Date(2024,8,28),
-  new Date(2024,9,11),
-];
-const completeAvailable = new Date(2024, 9, 12);
-
-
-console.log(Available);
-console.log(new Date(2024,8,21));
-console.log(Available.indexOf(new Date(2024,8,21)))
-
 function CalendarComp() {
   const [date, setDate] = useState(new Date());
 
@@ -40,7 +39,6 @@ function CalendarComp() {
         return 'weekend-day';
       }
       if(date2 > completeAvailable || Available.some(date => isSameDate(date, date2))){
-        console.log(date2);
         return 'available-day';
       }
     }
@@ -50,10 +48,7 @@ function CalendarComp() {
 
   const onChange = (newDate) => {
     const date2 = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate());
-    console.log(Available);
-    console.log(completeAvailable);
-    console.log(date2);
-    if(date2 > completeAvailable || Available.includes(date2)) setDate(newDate);
+    if(date2 > completeAvailable || Available.some(date => isSameDate(date, date2))) setDate(newDate);
     return;
   };
 
@@ -66,8 +61,8 @@ function CalendarComp() {
         tileClassName={tileClassName}
       />
       <p>Selected date: {date.toDateString()}</p>
-      <button onClick={()=>{
-        console.log(`Scheduled Date : ${date}`);
+      <button className='schedule-button' onClick={()=>{
+        console.log(date);
       }}>Schedule for this date ?</button>
     </div>
   );
