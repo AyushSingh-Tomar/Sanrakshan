@@ -28,5 +28,4 @@ const Navbar = ({ toggleLoginPopup }) => {
   )
 }
 
-
 export {Navbar}

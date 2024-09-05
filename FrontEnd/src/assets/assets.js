@@ -2,31 +2,43 @@
 
 //ex -->
 // import <any name of your choice> from <comparative address/ link of your image(png,jpeg ,etc...)>
-import logo from './logo.jpg';
+import logo from './logo.png';
 import search_icon from './search_icon.png';
-
-
-
+import phone from './phone.png';
+import mail from './mail.png';
+import complaint from './complaint.png';
+import heroimg from './fireHomepage.jpg';
+import besafe from './besafe.jpg';
+import guideline from './guideline.jpg';
 // below here you will put all these images in form of an object to export, keep this export at the end , do not form copy of it.
 
 export const assets ={
     //ex-> MyImage,
     logo,
-    search_icon
+    search_icon,
+    phone,
+    mail,
+    complaint,
+    heroimg,
+    besafe,
+    guideline
     // if you add your variable at last , then no need to add a comma but add comma at the end of upper variable.
 } 
 
 // this is Inspector List
-export const CheckList =[
-   { Description: "You have to.....",
+export const checkList =[
+   {name:"Aadhar card", 
+    Description: "You have to.....",
     CheckMark: false},
-   { Description: "You have to.....",
+   {name:"Aadhar card", 
+    Description: "You have to.....",
     CheckMark: false},
-   { Description: "You have to.....",
+   {name:"Aadhar card", 
+    Description: "You have to.....",
     CheckMark: false}
 ]
 
-export const PracticeList =[
+export const practiceList =[
     { Description: "You have to.....",
      CheckMark: false},
     { Description: "You have to.....",
