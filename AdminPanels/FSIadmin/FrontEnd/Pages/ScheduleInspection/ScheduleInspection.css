@@ -1,0 +1,36 @@
+.ScheduleFSI{
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.HeadFSI{
+    height:8vh;
+    color:white;
+}
+.InspectorArea{
+    height:20vh;
+}
+.card-container{
+    display: grid;
+    gap: 50px;
+    grid-template-columns : repeat(2,1fr);
+}
+
+
+.first-color { 
+	background-color: #272343; 
+}
+	
+.second-color { 
+	background-color: #ffffff; 
+}
+
+.third-color { 
+	background-color: #e3f6f5; 
+}
+
+.fourth-color { 
+	background-color: #bae8e8;
+}
