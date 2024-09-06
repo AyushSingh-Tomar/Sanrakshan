@@ -1,0 +1,93 @@
+.para {
+  margin-left: 400px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.devices {
+  height: 140px;
+  width: 300px;
+  background-color: #272343;
+  color: white;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 220px;
+  margin-top: 40px;
+  margin-right: 20px;
+  border-radius: 10px;
+  align-items: center;
+}
+.devices2 {
+  height: 140px;
+  width: 300px;
+  background-color: #7ad2ce;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 20px;
+  margin-left: 850px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.infra {
+  margin-top: 80px;
+  margin-left: 450px;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.mall {
+  height: 200px;
+  width: 300px;
+  margin-top: 70px;
+  margin-left: 50px;
+  padding-left: 20px;
+  padding-right: 100px;
+}
+.mall:hover {
+  transform: scale(1.1);
+}
+.installed {
+  margin-left: 150px;
+}
+.infra1 {
+  margin-top: 80px;
+  margin-left: 600px;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.mall2 {
+  height: 200px;
+  width: 250px;
+  margin-top: 100px;
+  margin-left: 580px;
+  /* padding-left: 60px; */
+  padding-right: 100px;
+}
+.para2 {
+  margin-left: 650px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.mall2:hover {
+  transform: scale(1.1);
+}
+.mall3 {
+  height: 200px;
+  width: 300px;
+  margin-top: 70px;
+  margin-left: 500px;
+  padding-left: 60px;
+  padding-right: 100px;
+  border-radius: 50px;
+}
+.mall3:hover {
+  transform: scale(1.1);
+}
+.para3 {
+  margin-left: 600px;
+  font-size: 20px;
+  font-weight: 600;
+}
