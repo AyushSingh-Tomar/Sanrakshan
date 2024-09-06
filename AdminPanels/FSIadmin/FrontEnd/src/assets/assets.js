@@ -38,6 +38,18 @@ export const checkList =[
     CheckMark: false}
 ]
 
+export const UserList =[
+    {name:"Praful Joshi", 
+     Reference_Id: "678yuh",
+     CheckMark: "Under Procedure"},
+    {name:"Aanand kumar", 
+     Reference_Id: "650lol",
+     CheckMark: "Under Procedure"},
+    {name:"Smriti Irani", 
+    Reference_Id: "pizza234",
+     CheckMark: "Under Procedure"}
+ ]
+
 export const practiceList =[
     { Description: "You have to.....",
      CheckMark: false},

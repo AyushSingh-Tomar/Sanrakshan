@@ -1,5 +1,5 @@
 // CalendarComponent.js
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import './Calendar.css';
 
@@ -62,7 +62,7 @@ function CalendarComp() {
       />
       <p>Selected date: {date.toDateString()}</p>
       <button className='schedule-button' onClick={()=>{
-        alert("The inspection has been scheduled for "+" "+date);
+        alert(`Inspection Scheduled for : ${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`);
       }}>Schedule for this date ?</button>
     </div>
   );
