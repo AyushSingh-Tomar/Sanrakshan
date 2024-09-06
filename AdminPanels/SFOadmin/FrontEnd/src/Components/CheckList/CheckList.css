@@ -1,0 +1,18 @@
+.req-docs
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.req-docs h1{
+    color: #262626;
+    font-weight: 500;
+}
+.explore-documents-text{
+    max-width: 60%;
+    color: #808080;
+}
+.explore-documents{
+    
+}

@@ -1,0 +1,59 @@
+.App {
+    text-align: center;
+  }
+  
+  .react-calendar {
+    max-width: 350px;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  .react-calendar__tile--active {
+    background-color: #006edc !important;
+    color: white !important;
+  }
+  /* CustomCalendar.css */
+
+
+.react-calendar__tile {
+  padding: 10px 6.67px;
+  background: none;
+  border: 1px solid #e6e6e6;
+  outline: none;
+}
+
+.react-calendar__tile:hover {
+  background-color: #f0f0f0;
+}
+
+.current-day {
+  background-color: #ffeb3b !important;
+  font-weight: bold;
+  border-color: #fbc02d;
+}
+
+.grey{
+  background-color: #dddddd !important;
+  font-weight: bold;
+  color : white;
+}
+.available-day {
+  background-color: #62ff3b !important;
+  font-weight: bold;
+  border-color: #f7f7f7;
+}
+.notavailable-day {
+  background-color: #ff3b3b !important;
+  font-weight: bold;
+  border-color: #f7f7f7;
+}
+
+.weekend-day {
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+  
