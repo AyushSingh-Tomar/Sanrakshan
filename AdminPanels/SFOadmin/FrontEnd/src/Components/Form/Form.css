@@ -2,14 +2,16 @@
 .form-container {
   background-color: #e3f6f5;
   border-radius: 10px;
+  border: 2px dotted black;
   padding: 30px;
+  padding-left: 50px;
+  padding-right: 60px;
   max-width: 600px;
   margin: 40px auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #272343;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease-in-out;
-  border: 1px dotted black;
 }
 
 .form-container:hover {
@@ -27,7 +29,12 @@ h2 {
   margin-bottom: 20px;
   text-align: left;
 }
-
+.inspector {
+  background-color: #fee8d6;
+}
+.errors.inspectorName {
+  background-color: #dbdc83;
+}
 label {
   display: block;
   margin-bottom: 5px;
@@ -209,35 +216,4 @@ button.toggle-button {
 
 button.toggle-button:hover {
   background-color: #1d1e3c;
-}
-.dialog-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dialog {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  width: 300px;
-  text-align: center;
-}
-
-.dialog button {
-  margin-top: 10px;
-  background-color: #bae8e8;
-  color: black;
-}
-.reject {
-  margin-top: 20px;
-}
-.inspector {
-  background-color: #fee8d6;
 }
