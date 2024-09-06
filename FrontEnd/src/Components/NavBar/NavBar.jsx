@@ -3,7 +3,9 @@ import './NavBar.css'
 import { assets } from '../../assets/assets'
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-const Navbar = () => {
+
+
+const Navbar = ({ toggleLoginPopup }) => {
   const [menu,setMenu] =useState("home");
   return (
     <div className='navbar'>
@@ -19,8 +21,8 @@ const Navbar = () => {
         <div className="navbar-search-icon">
           
         </div> */}
-        <button>Sign in</button>
-        <button>Sign up</button>
+        <button onClick={toggleLoginPopup}>Sign in</button>
+        <button onClick={toggleLoginPopup}>Login</button>
       </div>
     </div>
   )

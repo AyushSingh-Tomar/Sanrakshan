@@ -12,6 +12,7 @@ import DashBoard from "./Components/Dashboard/Dashboard";
 import { useState } from "react";
 
 const App = () => {
+
   const [showLogin, setShowLogin] = useState(false);
   return (
     <>
@@ -28,8 +29,30 @@ const App = () => {
         </Routes>
       </div>
       <Footer />
+
+  const [showLogin,setShowLogin]=useState(false);
+  const toggleLoginPopup = () => {
+    setShowLogin(!showLogin);
+  };
+  return (
+    <>
+    {/* {showLogin?<LoginPopup/>:<></>} */}
+    {showLogin && <LoginPopup toggleDialog={toggleLoginPopup}/>} 
+    <div className='app'>
+    <Navbar toggleLoginPopup={toggleLoginPopup}/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/dashboard" element={<DashBoard/>}/>
+      <Route path="/trackProgress" element={<TrackProgress/>}/>
+      <Route path="/applynoc" element={<ApplyNOC/>}/>
+    </Routes>
+    </div>
+    <Footer/>
+
     </>
   );
 };
 
+
 export default App;
+
