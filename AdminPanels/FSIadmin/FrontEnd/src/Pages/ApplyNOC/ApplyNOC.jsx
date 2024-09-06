@@ -5,9 +5,8 @@ const ApplyNOC = () => {
   return (
     <>
     <CheckList/>
-    <div><br></br></div>
     <PracticeList/>
-    <div><br></br></div>
+    <div></div>
     </>
   )
 }
