@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import '../Schedule/Schedule.css';
-import CalendarComp from '../../Components/Calendar/Calendar.jsx';
-import Modal from '../../Components/Modal/Modal.jsx';
-import Card from '../../Components/InspectorCard/ICard.jsx';
+import './Schedule.css'
+import CalendarComp from '../Calendar/Calendar.jsx';
+import Modal from '../Modal/Modal.jsx';
+import Card from '../InspectorCard/Card.jsx';
+
+//mock data
 const numberOfInspector = 9;
 const Inspectors = [
   {
@@ -31,8 +33,10 @@ const Inspectors = [
     description:"John is a skilled software engineer with 5 years of experience in full-stack development."
   }
 ];
-const Schedule = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+// mock data ends
+
+function Schedule() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -41,8 +45,8 @@ const Schedule = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
   return (
-   <>
     <div className='ScheduleFSI second-color'>
       <div className='HeadFSI first-color'>Schedule an Inspection</div>
 
@@ -70,8 +74,7 @@ const Schedule = () => {
         <CalendarComp/>
       </div>
     </div>
-   </>
   )
 }
 
-export {Schedule}
+export default Schedule

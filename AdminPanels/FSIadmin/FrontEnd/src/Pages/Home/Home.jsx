@@ -1,11 +1,9 @@
 import { Header } from '../../Components/Header/Header'
 import './Home.css'
-import Footer from '../../Components/Footer/Footer'
 import { assets } from '../../assets/assets'
 import { CardTab } from '../../Components/Card/Card'
 const Home = () => {
   return (
-    <>
     <div>
       <Header/>
       <div className="slogan">
@@ -31,7 +29,6 @@ const Home = () => {
         </div>
         </div>
     </div>
-    </>
   )
 }
 
