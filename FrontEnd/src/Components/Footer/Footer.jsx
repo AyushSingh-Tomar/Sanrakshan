@@ -1,4 +1,6 @@
 import './footer.css'
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import { assets } from '../../assets/assets'
 const Footer = () => {
   return (
@@ -26,6 +28,7 @@ const Footer = () => {
           <div className="footer-content-right">
             <h2>SEEK HELP</h2>
             <ul>
+              <li><Button variant="outline-primary"><Link to="/complaint">Lodge complaint</Link></Button>{' '}</li>
               <li>0755 258 8877</li>
               <li>Firedet@gmail.com</li>
             </ul>

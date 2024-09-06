@@ -7,6 +7,7 @@ import DashBoard from './Pages/DashBoard/DashBoard';
 import ApplyNOC from './Pages/ApplyNOC/ApplyNOC';
 import LoginPopup from './Components/LoginPopup/Loginpopup';
 import Footer from './Components/Footer/Footer';
+import Complaint from './Pages/Complaint/Complaint';
 import { useState } from 'react';
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/trackProgress" element={<TrackProgress referenceId={referenceId} />} />
           <Route path="/applynoc" element={<ApplyNOC />} />
+          <Route path="/complaint" element={<Complaint />} />
         </Routes>
       </div>
       <Footer />
