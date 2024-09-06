@@ -103,18 +103,37 @@
     background-color: #ffffff; 
   }
   
-  .close-btn {
-    margin-top: 10px;
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    color: #ff5722; /* Customize the color to fit the design */
+    transition: color 0.3s;
   }
   
-  .close-btn:hover {
-    background-color: #e64a19; 
+  .close-icon:hover {
+    color: #e64a19;
   }
-  
+  /* Styling for the dropdown */
+.dropdown {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid orange;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px;
+  background-color: #fff3e0;
+  color: #6f6f6f;
+}
+
+/* Ensure the same focus and hover effects as the input fields */
+.dropdown:focus {
+  outline: none;
+  border-color: orange;
+}
+
+.dropdown:hover {
+  border-color: orange;
+}

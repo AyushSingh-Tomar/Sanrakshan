@@ -1,0 +1,32 @@
+.slogan{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+}
+.slogan-left, .slogan-right{
+    width: 50%;
+    height: inherit;
+    display: inline;
+}
+.slogan-right img{
+    width: 50%;
+    height: inherit;
+    float: right;
+
+}
+.slogan-left
+{
+    margin-top: auto;
+   margin-bottom: auto;
+}
+.slogan-left h2
+{
+   font-size: 40px;
+}
+.cardHolder{
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
