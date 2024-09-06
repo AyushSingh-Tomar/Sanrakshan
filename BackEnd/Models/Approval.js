@@ -1,31 +1,42 @@
-const mongoose = require('mongoose');
-
-// Admin-specific approval status schema with unique reference ID
-const approvalStatusSchema = new mongoose.Schema({
-    status: { type: String, default: 'pending' }, // 'pending', 'approved', 'rejected'
-    referenceId: { type: String, default: function() { return `REF-${Date.now()}-${Math.floor(Math.random() * 10000)}`; }}, // Unique reference ID for each admin
-    approvedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null }, // User who approved
-    approvedAt: { type: Date, default: null }, // Date and time of approval
-});
+import mongoose from 'mongoose';
 
 const approvalSchema = new mongoose.Schema({
-    mainReferenceId: { type: String, required: true, unique: true }, // Main reference ID created on document upload
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // User who uploaded documents
-    documents: [{ type: String, required: true }], // Paths to uploaded documents
-    approvalStatus: {
-        taadmin: { type: approvalStatusSchema, default: {} },
-        sfoadmin: { type: approvalStatusSchema, default: {} },
-        sfaadmin: { type: approvalStatusSchema, default: {} },
-        fsiadmin: { type: approvalStatusSchema, default: {} },
-        dfo: { type: approvalStatusSchema, default: {} },
-        dcfo: { type: approvalStatusSchema, default: {} },
-        cfo: { type: approvalStatusSchema, default: {} },
-        adfo: { type: approvalStatusSchema, default: {} },
-    },
-    progressPercentage: { type: Number, default: 0 },
-    currentLevel: { type: String, default: 'taadmin' }, // Track which admin level is currently responsible
+  referenceId: { type: String, required: true, unique: true },
+  userId: { type: String, required: true },
+  document: { type: String, required: true },
+  stages: [
+    {
+      role: { type: String, required: true },
+      status: { type: String, required: true },
+      decision: { type: String },
+      time: { type: String },
+      date: { type: String },
+      percentage: { type: Number }
+    }
+  ],
+  progressPercentage: { type: Number, default: 0 },
+  finalStatus: { type: String }
 });
 
-const Approval = mongoose.model('Approval', approvalSchema);
 
-module.exports = Approval;
+// Middleware to set the current time and date when status is updated
+approvalSchema.pre('save', function (next) {
+  const now = new Date();
+
+  // Update the time and date for stages where the status has been updated
+  this.stages.forEach(stage => {
+    if (stage.status !== 'Pending' && !stage.time) {
+      stage.time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      // Format the date in 'dd-mm-yyyy'
+      const day = String(now.getDate()).padStart(2, '0');
+      const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+      const year = now.getFullYear();
+      stage.date = `${day}-${month}-${year}`; // dd-mm-yyyy format
+    }
+  });
+
+  next();
+});
+
+export default mongoose.model('Approval', approvalSchema);

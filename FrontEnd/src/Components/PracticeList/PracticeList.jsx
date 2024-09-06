@@ -1,13 +1,28 @@
-import { useContext } from 'react'
-import {ContextProvider} from '../../Context/Context.jsx'
-import './PracticeList.css'
+import { practiceList } from '../../assets/assets'; // Import practiceList from assets
+import './PracticeList.css';
+import Card from 'react-bootstrap/Card';
+
 const PracticeList = () => {
-    // const {practiceList}=useContext(ContextProvider)
   return (
     <div className='PracticeList' id="PracticeList">
-        <h2>Practices you should follow</h2>
+      <h2>Practices You Should Follow</h2>
+      <br></br>
+      <div className="practice-documents">
+        {practiceList.map((item, index) => (
+          <div key={index} className="listitem">
+            <Card style={{ width: '100%' }}>
+              <Card.Body>
+                <Card.Text>
+                  {item.Description}
+                </Card.Text>
+                <Card.Link href="#">Read More</Card.Link>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export {PracticeList}
+export { PracticeList };
