@@ -62,7 +62,7 @@ function CalendarComp() {
       />
       <p>Selected date: {date.toDateString()}</p>
       <button className='schedule-button' onClick={()=>{
-        console.log(date);
+        alert("The inspection has been scheduled for "+" "+date);
       }}>Schedule for this date ?</button>
     </div>
   );
