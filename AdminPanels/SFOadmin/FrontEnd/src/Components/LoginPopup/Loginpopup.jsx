@@ -13,6 +13,7 @@ const Loginpopup = ({ toggleDialog }) => {
 
        <div className="overlay">
           <div className="signup-dialog">
+          <span onClick={toggleDialog} className="close-btn">&times;</span>
           <img src={logo} alt="Logo" className="logo" />
           <div></div>
           <h2>{isSignup ? 'Signup Now': 'Login Now'}</h2>
@@ -47,7 +48,7 @@ const Loginpopup = ({ toggleDialog }) => {
           <button className="sub" type="submit">Submit</button>
         </form>
         )}
-            <button onClick={toggleDialog} className="close-btn">Close</button>
+           
           </div>
         </div>
   
