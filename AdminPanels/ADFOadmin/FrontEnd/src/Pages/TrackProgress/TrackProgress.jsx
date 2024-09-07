@@ -1,7 +1,15 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {UserList} from '../../assets/assets'
+import {useState} from 'react'
 const TrackProgress = () => {
+  const [variant, setVariant] = useState('primary');
+  const [textx, settextx] = useState('Proceed');
+
+  const handleClick = () => {
+    setVariant(variant === 'primary' ? 'success' : 'primary');
+    settextx(textx === 'Proceed' ? 'Approved' : 'Proceed');
+  };
   return (
     <div className='req-docs' id='req-docs'>
     <h1>List of Pending N.O.C requests</h1>
@@ -15,7 +23,7 @@ const TrackProgress = () => {
       <Card.Subtitle>
         {"Status :"+ item.CheckMark}
       </Card.Subtitle>
-      <Button variant="outline-primary">Proceed</Button>{' '}
+      <Button onClick={handleClick} variant={variant}>{textx}</Button>{' '}
       <Button variant="outline-warning">Hault</Button>{' '}
       <Button variant="outline-danger">Reject</Button>{' '}
     </Card.Body>

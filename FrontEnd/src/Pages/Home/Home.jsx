@@ -2,6 +2,7 @@ import { Header } from '../../Components/Header/Header'
 import './Home.css'
 import { assets } from '../../assets/assets'
 import { CardTab } from '../../Components/Card/Card'
+import Rendercard from '../../Components/Card/RenderCard'
 const Home = () => {
   return (
     <div>
@@ -18,14 +19,7 @@ const Home = () => {
         <div className="CardFrame">
           <h2>Guide Lines</h2>
         <div className="cardHolder">
-          <CardTab/>
-          <CardTab/>
-          <CardTab/>
-        </div>
-        <div className="cardHolder">
-          <CardTab/>
-          <CardTab/>
-          <CardTab/>
+          <Rendercard/>
         </div>
         </div>
     </div>

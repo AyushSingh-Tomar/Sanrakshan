@@ -1,0 +1,26 @@
+#card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8rem; /* Adjust the gap between the cards */
+    padding: 20px;
+  }
+  
+  #child {
+    border: 1px solid #ccc; /* Add border if needed */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff; /* Or any background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    #card {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #card {
+      grid-template-columns: 1fr; /* 1 card per row on small screens */
+    }
+  }
