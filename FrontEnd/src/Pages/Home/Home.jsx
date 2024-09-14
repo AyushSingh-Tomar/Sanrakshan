@@ -15,6 +15,7 @@ const Home = () => {
           <div className="slogan-right">
             <img src={assets.besafe} alt="be safe" />
           </div>
+        <br/>
         </div>
         <div className="CardFrame">
           <h2>Guide Lines</h2>
