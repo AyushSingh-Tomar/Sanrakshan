@@ -8,7 +8,7 @@ const DashBoard = ({ pendingApplications, scheduledApplications }) => {
       <div className="card-container">
         <div className="dash">
           <p className="dash">Name : Manoj Singh</p>
-          <p className="dash">Designation : Assistant Divisional Fire Officer</p>
+          <p className="dash">Designation : Clerical Staff</p>
           
       </div>
     </div>
