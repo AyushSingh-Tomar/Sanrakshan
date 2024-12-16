@@ -11,6 +11,7 @@ const Available =[
   new Date(2024,9,11),
 ];
 const completeAvailable = new Date(2024, 9, 12);
+const lastDate = new Date(2024,11,11);
 // mock data ends
 
 const isSameDate = (date1, date2) => {
@@ -32,13 +33,13 @@ function CalendarComp() {
       if(date.getFullYear() === ate.getFullYear() && date.getMonth() < ate.getMonth()) return 'grey';
       if(date.getFullYear() === ate.getFullYear() && date.getMonth() === ate.getMonth() && date.getDate() < ate.getDate()) return 'grey';
       
-      if (date.getDate() === ate.getDate() && date.getMonth() === ate.getMonth()) {
+      if (date.getDate() === ate.getDate() && date.getMonth() === ate.getMonth() && date.getFullYear()===ate.getFullYear()) {
         return 'current-day';
       }
       if (date.getDay() === 0) {
         return 'weekend-day';
       }
-      if(date2 > completeAvailable || Available.some(date => isSameDate(date, date2))){
+      if((date2 > completeAvailable && date2 < lastDate) || Available.some(date => isSameDate(date, date2))){
         return 'available-day';
       }
     }
@@ -48,7 +49,8 @@ function CalendarComp() {
 
   const onChange = (newDate) => {
     const date2 = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate());
-    if(date2 > completeAvailable || Available.some(date => isSameDate(date, date2))) setDate(newDate);
+    if(newDate.getDay()===0) return ;
+    if((date2 > completeAvailable && date2 < lastDate) || Available.some(date => isSameDate(date, date2))) setDate(newDate);
     return;
   };
 
