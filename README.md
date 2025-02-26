@@ -100,18 +100,24 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For any queries or support, please contact the project team at [This Email](mailto:ayushtomarrudra@gmail.com).
 
 ---
+
  # Work Flow
+ 
 ![Functions](./readmeimage.jpg)
 
  # Procedure
+ 
 ![Procedure](./procedure.pdf)
 
  # Website Outlay
+ 
 ![Outlay](./OutLay.pdf)
 
  # UserPanel
+ 
 ![UserPanel](./UserPanel.pdf)
 
  # IoT
+ 
 ![IoT](./IoT.pdf)
 
